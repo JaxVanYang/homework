@@ -1,0 +1,9 @@
+spring:
+  datasource:
+     username: root
+     password: nopasswd
+     url: jdbc:mysql://localhost:3306/acmback?useSSL=true&serverTimezone=GMT
+     driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  config-location:  classpath:/mybatis/config/mybatis-config.xml
