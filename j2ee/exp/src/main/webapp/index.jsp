@@ -13,5 +13,7 @@
 <p><a href="counter-servlet">Counter</a></p>
 <p><a href="image-servlet">Listener Counter</a></p>
 <p><a href="login.jsp">Login JSP</a></p>
+<p><a href="input-number-servlet">Guess</a></p>
+<p><a href="last-access-servlet">Last Access</a></p>
 </body>
 </html>
