@@ -44,9 +44,9 @@ public class GuessNumberServlet extends HttpServlet {
 
                 int guess = (int) session.getAttribute("GUESS");
                 if (guess > number) {
-                    status = "您猜的价格小了";
+                    status = "您猜的数字小了";
                 } else if (guess < number) {
-                    status = "您猜的价格大了";
+                    status = "您猜的数字大了";
                 } else {
                     url = "/guess-right-servlet";
                 }

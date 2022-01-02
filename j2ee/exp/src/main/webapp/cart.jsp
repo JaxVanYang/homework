@@ -1,11 +1,5 @@
 <%@ page import="com.example.exp.exp11.Book" %>
-<%@ page import="java.util.List" %><%--
-  Created by IntelliJ IDEA.
-  User: Rekord
-  Date: 2022/1/2
-  Time: 14:02
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -67,7 +61,8 @@
         %>
         <tr>
             <td colspan="3">总计</td>
-            <td>￥<%= total %></td>
+            <td>￥<%= total %>
+            </td>
         </tr>
     </table>
     <p>
