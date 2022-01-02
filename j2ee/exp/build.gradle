@@ -14,8 +14,8 @@ ext {
     junitVersion = '5.8.1'
 }
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+sourceCompatibility = "11"
+targetCompatibility = "11"
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
@@ -23,6 +23,8 @@ tasks.withType(JavaCompile) {
 
 dependencies {
     compileOnly('javax.servlet:javax.servlet-api:4.0.1')
+    compileOnly 'javax.servlet.jsp:javax.servlet.jsp-api:2.3.3'
+
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
