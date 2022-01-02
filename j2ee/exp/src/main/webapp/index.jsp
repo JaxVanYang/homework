@@ -15,5 +15,8 @@
 <p><a href="login.jsp">Login JSP</a></p>
 <p><a href="input-number-servlet">Guess</a></p>
 <p><a href="last-access-servlet">Last Access</a></p>
+<p><a href="list-book-servlet">Buy Book</a></p>
+<p><a href="cart.jsp">Cart</a></p>
+<p><a href="cart-login.jsp">Cart Login</a></p>
 </body>
 </html>
