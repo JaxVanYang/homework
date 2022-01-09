@@ -12,7 +12,7 @@ import java.util.Properties;
 
 @WebListener
 public class CountListener implements ServletRequestListener, ServletContextListener {
-    private static final String url = "/home/jax/tmp/listener-count.properties";
+    private static final String url = "/listener-count.properties";
     private static Counter counter = null;
 
     public static Counter getCounter() {
@@ -24,12 +24,8 @@ public class CountListener implements ServletRequestListener, ServletContextList
         if (counter == null) {
             counter = new Counter();
 
-            InputStream in = null;
-            try {
-                in = new FileInputStream(url);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
+            InputStream in = sre.getServletContext().getResourceAsStream(url);
+
             Properties pros = new Properties();
             try {
                 pros.load(in);
@@ -48,7 +44,7 @@ public class CountListener implements ServletRequestListener, ServletContextList
         Properties pros = new Properties();
         pros.setProperty("count", Integer.toString(counter.getCount()));
         try {
-            FileOutputStream out = new FileOutputStream(url);
+            FileOutputStream out = new FileOutputStream(sce.getServletContext().getRealPath(url));
             pros.store(out, "CountListener");
         } catch (IOException e) {
             e.printStackTrace();

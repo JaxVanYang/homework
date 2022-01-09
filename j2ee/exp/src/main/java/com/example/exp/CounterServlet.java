@@ -14,17 +14,13 @@ import java.util.Properties;
 @WebServlet(name = "counterServlet", value = "/counter-servlet", loadOnStartup = 1)
 public class CounterServlet extends HttpServlet {
     private static Counter counter = null;
-    private static final String url = "/home/jax/tmp/count.properties";
+    private static final String url = "/count.properties";
 
     @Override
     public void init() throws ServletException {
         if (counter == null) {
-            InputStream in = null;
-            try {
-                in = new FileInputStream(url);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
+            InputStream in = getServletContext().getResourceAsStream(url);
+
             Properties pros = new Properties();
             try {
                 pros.load(in);
@@ -49,7 +45,7 @@ public class CounterServlet extends HttpServlet {
         Properties pros = new Properties();
         pros.setProperty("count", Integer.toString(counter.getCount()));
         try {
-            FileOutputStream out = new FileOutputStream(url);
+            FileOutputStream out = new FileOutputStream(getServletContext().getRealPath(url));
             pros.store(out, "CounterServlet");
         } catch (IOException e) {
             e.printStackTrace();
