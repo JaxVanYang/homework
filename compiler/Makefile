@@ -1,18 +1,17 @@
 BUILD_DIR := build
 SRC_DIR := src
+BIN_DIR := bin
 
 SRCS := $(shell find $(SRC_DIR) -name '*.c')
 OBJS := $(SRCS:%.c=$(BUILD_DIR)/%.o)
-OUTS := $(SRCS:%.c=$(BUILD_DIR)/%)
+OUTS := $(OBJS:%.o=%)
 
-CPPFLAGS := $(INC_FLAGS) -Wall -g
+CPPFLAGS := $(INC_FLAGS) -Wall -Werror -g
 
 all: $(OUTS)
+	mkdir -p $(BIN_DIR)
+	cp $^ $(BIN_DIR)
 
-# Run $(BUILD_DIR)/target
-# But you should run `make all` first for unknown reason
-%: $(BUILD_DIR)/$(SRC_DIR)/%
-	-$^
 
 $(BUILD_DIR)/%: $(BUILD_DIR)/%.o
 	$(CC) $^ -o $@ $(LDFLAGS)
@@ -23,4 +22,4 @@ $(BUILD_DIR)/%.o: %.c
 
 .PHONY: clean
 clean:
-	rm -r $(BUILD_DIR)
+	rm -r $(BUILD_DIR) $(BIN_DIR)
