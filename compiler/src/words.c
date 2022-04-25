@@ -52,7 +52,7 @@ void get_buf(int reset) {
 	buf[0] = buf[BUF_SIZE - 1];
 	for (int i = buf_ptr; i < BUF_SIZE; ++i) {
 		buf[i] = getchar();
-		if (buf[i] == EOF) {
+		if ((signed char) buf[i] == EOF) {
 			has_next = 0;
 			return;
 		}
@@ -71,7 +71,7 @@ int get_char() {
 	if (buf_ptr == BUF_SIZE) {
 		get_buf(0);
 	}
-	if (buf[buf_ptr] == EOF) {
+	if ((signed char) buf[buf_ptr] == EOF) {
 		return 0;
 	}
 
