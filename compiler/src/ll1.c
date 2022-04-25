@@ -215,15 +215,15 @@ static void parse_input(FILE *in, const int verbose) {
 			if (verbose) {
 				printf("Log: push %s -> ", terminate);
 				int n = strlen(rule);
-				if (n == 0) {
-					puts("epsilon");
-				} else {
+				if (strcmp(rule, EPS)) {
 					for (int i = 0; i < n; ++i) {
 						int id = get_terminate_id(rule[i]);
 						if (id == -1) putchar(rule[i]);
 						else printf("%s", rows[id]);
 					}
 					putchar('\n');
+				} else {
+					puts("epsilon");
 				}
 			}
 
