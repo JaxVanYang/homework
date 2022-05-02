@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>漫步时尚广场-首页</title>
+  <link href="../css/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../css/index.css" type="text/css">
+  <script type="text/javascript" src="../js/pictureSlide.js"></script>
+</head>
+
+<body>
+  <div class="top_bg">
+    <div class="top_content">
+      <div class="floatl"><img src="../images/star.jpg">收藏 | HI，欢迎来订购 ！<a href="../manageadmin/login.html"
+          class="orange">[请登录]</a> <a href="register.html" class="orange"> [免费注册]</a></div>
+      <div class="floatr">客户服务<img src="../images/arrow.gif">&nbsp;网站导航<img src="../images/arrow.gif">&nbsp;
+        <div class="xl">
+          <div class="droparrow" onclick="showCar()"><span class="shopcart"></span>我的购物车
+            <span class="orange">0</span>件<img src="../images/arrow.gif" />
+          </div>
+          <div class="dropdown" id="dropdown" style="display: none" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <ul class="shop_pic">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  <div class="logo"><a href="index.html"><img src="../images/logo.jpg"></a><img src="../images/banner.jpg"
+      class="floatr "></div>
+
+  <div class="nav_bg">
+    <div class="nav_content">
+      <ul class="nav">
+        <li class="nav_active"><a href="index.html" class="white">首页</a></li>
+        <li><a href="shoppingShow.html" class="white">最新上架</a></li>
+        <li>品牌活动</li>
+        <li>原厂直供</li>
+        <li>团购</li>
+        <li>限时抢购</li>
+        <li>促销打折</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="main">
+    <ul class="menu">
+      <li><span class="title">女装</span></li>
+      <li><span class="red_dot"></span><a href="#">上衣</a><span class="right_arrow"></span></li>
+      <li><span class="red_dot"></span><a href="#">下装</a><span class="right_arrow"></span></li>
+      <li><span class="red_dot"></span><a href="#">连衣裙</a><span class="right_arrow"></span></li>
+      <li><span class="red_dot"></span><a href="#">内衣</a><span class="right_arrow"></span></li>
+      <li><span class="title">男装</span></li>
+      <li><span class="red_dot"></span><a href="#">T恤</a><span class="right_arrow"></span></li>
+      <li><span class="red_dot"></span><a href="#">短裤</a><span class="right_arrow"></span></li>
+      <li><span class="red_dot"></span><a href="#">衬衫</a><span class="right_arrow"></span></li>
+      <li><span class="title">童装</span></li>
+      <li><span class="red_dot"></span><a href="#">上衣</a><span class="right_arrow"></span></li>
+      <li><span class="red_dot"></span><a href="#">裤子</a><span class="right_arrow"></span></li>
+      <li><span class="title">运动</span></li>
+      <li><span class="red_dot"></span><a href="#">运动裤</a><span class="right_arrow"></span></li>
+      <li><span class="red_dot"></span><a href="#">跑步鞋</a><span class="right_arrow"></span></li>
+    </ul>
+
+    <div class="main">
+      <div class="middle">
+        <img src="../images/index/pic1.jpg" id="focusImg">
+        <ul class="focusBox">
+          <li onclick="showPic(1);"></li>
+          <li onclick="showPic(2);"></li>
+          <li onclick="showPic(3);"></li>
+        </ul>
+      </div>
+
+      <div class="right_nav">
+        <ul>
+          <li>李克强点赞</li>
+          <li>网购维权</li>
+          <li>全球直供</li>
+          <li>青岛交警</li>
+          <li>面对新常态，唯创新改革</li>
+          <li>差评敲诈淘宝</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  <div class="footer">
+    <div class="foot_title">
+      <ul class="foot_pic">
+        <li><img src="../images/gray1.jpg"></li>
+        <li><img src="../images/gray2.jpg"></li>
+        <li><img src="../images/gray3.jpg"></li>
+        <li><img src="../images/gray4.jpg"></li>
+        <li><img src="../images/gray5.jpg"></li>
+      </ul>
+    </div>
+    <ul class="foot_list">
+      <li>
+        <div class="floatl">
+          <p class="red1"></p>
+          <p class="line1"></p>
+        </div>
+        <ul class="floatl">
+          <li class="font16 padding-bottom">新手指导</li>
+          <li>用户注册</li>
+          <li>电话下单</li>
+          <li>购物流程</li>
+          <li>购物保障</li>
+          <li>服务协议</li>
+        </ul>
+      </li>
+      <li>
+        <div class="floatl">
+          <p class="red2"></p>
+          <p class="line1"></p>
+        </div>
+        <ul class="floatl">
+          <li class="font16 padding-bottom">支付方式</li>
+          <li>货到付款</li>
+          <li>商城卡支付</li>
+          <li>支付宝、网银支付</li>
+          <li>优惠券抵用</li>
+        </ul>
+      </li>
+      <li>
+        <div class="floatl">
+          <p class="red3"></p>
+          <p class="line1"></p>
+        </div>
+        <ul class="floatl">
+          <li class="font16 padding-bottom">配送方式</li>
+          <li>闪电发货</li>
+          <li>满百包邮</li>
+          <li>配送范围及时间</li>
+          <li>商品验收及签收</li>
+          <li>服务协议</li>
+        </ul>
+      </li>
+      <li>
+        <div class="floatl">
+          <p class="red3"></p>
+          <p class="line1"></p>
+        </div>
+        <ul class="floatl">
+          <li class="font16 padding-bottom">售后服务</li>
+          <li>退换货协议</li>
+          <li>关于发票</li>
+          <li>退换货流程</li>
+          <li>退换货运费</li>
+        </ul>
+      </li>
+      <li>
+        <div class="floatl">
+          <p class="red3"></p>
+          <p class="line1"></p>
+        </div>
+        <ul class="floatl">
+          <li class="font16 padding-bottom">关于帐号</li>
+          <li>修改个人信息</li>
+          <li>修改密码</li>
+          <li>找回密码</li>
+        </ul>
+      </li>
+      <li>
+        <div class="floatl">
+          <p class="red3"></p>
+          <p class="line1"></p>
+        </div>
+        <ul class="floatl">
+          <li class="font16 padding-bottom">优惠活动</li>
+          <li>竞拍须知</li>
+          <li>抢购须知</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="clear"></div>
+    <div class="foot_line"></div>
+    <p class="padding-top">Copyright 2021-2021 CSUST</p>
+    <p><img src="../images/foot_pic.jpg"></p>
+    <div class="clear"></div>
+  </div>
+
+</body>
+
+</html>

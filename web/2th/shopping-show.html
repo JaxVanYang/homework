@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>漫步时尚广场</title>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li,
+        ul {
+            list-style: none;
+        }
+
+        .nav_bg {
+            background: #CE2626;
+            width: 100%;
+            color: #FFF;
+        }
+
+        .nav_content {
+            width: 100%;
+            margin: 0 auto;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .nav {
+            width: 100%;
+            float: left;
+        }
+
+        .nav li {
+            font-size: 16px;
+            font-weight: 700;
+            color: #FFF;
+            width: 80px;
+            text-align: center;
+            float: left;
+        }
+
+        .nav_active {
+            background: #B12121;
+        }
+
+        a.white {
+            color: #FFF;
+        }
+
+        a.white:hover {
+            color: #FF0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* 左侧导航 */
+        .menu {
+            width: 20%;
+            float: left;
+            border: 1px solid #E5E4E1;
+            height: 100%;
+            background-color: #FFC;
+        }
+
+        .menu li {
+            background: #FFF;
+        }
+
+        li.title {
+            background: rgb(221, 211, 211);
+        }
+
+        .red_dot {
+            content: url("images/red_dot.gif");
+            margin-right: 10px;
+        }
+
+        .right_arrow {
+            content: url("images/arrow_r.jpg");
+            float: right;
+        }
+
+        /* 中间部分 */
+        .middle {
+            float: left;
+            width: 75%;
+        }
+
+        .pic_list {
+            float: left;
+            margin: 0 6px 3px 12px;
+            height: 120px;
+            width: 98%;
+        }
+
+        .pic_list dl {
+            float: left;
+            width: 20%;
+        }
+
+        .pic_list dd {
+            width: 70%;
+        }
+
+        .pic_title {
+            float: left;
+            background: #FF9C01;
+            line-height: 40px;
+            color: #FFF;
+            text-indent: 20px;
+            text-align: left;
+            width: inherit;
+            font-size: 16px;
+            margin: 0 10px 10px;
+        }
+
+        /* 底部 */
+        .clear {
+            clear: both;
+        }
+
+        .foot_line {
+            border-bottom: 1px solid #CCC;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 菜单导航栏 start -->
+    <div class="nav_bg">
+        <div class="nav_content">
+            <ul class="nav">
+                <li><a href="shopping-show.html" class="white">首页</a></li>
+                <li class="nav_active"><a href="shopping-show.html" class="white">最新上架</a></li>
+                <li>品牌活动</li>
+                <li>原厂直供</li>
+                <li>团购</li>
+                <li>限时抢购</li>
+                <li>促销打折</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 菜单导航栏 end -->
+
+    <!-- 购物列表 start -->
+    <ul class="menu">
+        <li class="title"><span class="title">女装</span></li>
+        <li><span class="red_dot"></span><a href="#">上衣</a><span class="right_arrow"></span></li>
+        <li><span class="red_dot"></span><a href="#">下装</a><span class="right_arrow"></span></li>
+        <li><span class="red_dot"></span><a href="#">连衣裙</a><span class="right_arrow"></span></li>
+        <li><span class="red_dot"></span><a href="#">内衣</a><span class="right_arrow"></span></li>
+        <li class="title"><span class="title">男装</span></li>
+        <li><span class="red_dot"></span><a href="#">T 恤</a><span class="right_arrow"></span></li>
+        <li><span class="red_dot"></span><a href="#">短裤</a><span class="right_arrow"></span></li>
+        <li><span class="red_dot"></span><a href="#">衬衫</a><span class="right_arrow"></span></li>
+        <li class="title"><span class="title">童装</span></li>
+        <li><span class="red_dot"></span><a href="#">上衣</a><span class="right_arrow"></span></li>
+        <li><span class="red_dot"></span><a href="#">裤子</a><span class="right_arrow"></span></li>
+        <li class="title"><span class="title">运动</span></li>
+        <li><span class="red_dot"></span><a href="#">运动裤</a><span class="right_arrow"></span></li>
+        <li><span class="red_dot"></span><a href="#">跑步鞋</a><span class="right_arrow"></span></li>
+    </ul>
+    <!-- 购物列表 end -->
+
+    <!-- 中间区 start -->
+    <div class="middle">
+        <h1 class="pic_title">最新上架</h1>
+        <div class="pic_list">
+            <dl>
+                <div><a href="shopping-detail.html" target="_blank"><img src="images/shopshow/yifu1.jpg"></a></div>
+                <dt><span class="price">￥ 198.00 元</span><span class="font12">324 人购买</span></dt>
+                <dd>冬季新款牛仔外套加厚连帽毛领加绒牛仔棉衣</dd>
+            </dl>
+            <dl>
+                <div><img src="images/shopshow/yifu2.jpg"></div>
+                <dt><span class="price">￥ 98.00 元</span><span class="font12">0 人购买</span></dt>
+                <dd>短袖</dd>
+            </dl>
+            <dl>
+                <div><img src="images/shopshow/yifu3.jpg"></div>
+                <dt><span class="price">￥ 198.00 元</span><span class="font12">0 人购买</span></dt>
+                <dd>还是短袖</dd>
+            </dl>
+            <dl>
+                <div><img src="images/shopshow/yifu4.jpg"></div>
+                <dt><span class="price">￥ 198.00 元</span><span class="font12">0 人购买</span></dt>
+                <dd>不知道是啥</dd>
+            </dl>
+        </div>
+    </div>
+    <!-- 中间区 end -->
+
+    <!-- 版权区 start -->
+    <div class="clear"></div>
+    <div class="foot_line">
+        <p align="center" class="padding_top">Copyright 2021 - 2021 学号：201908130416</p>
+        <p align="center"><img src="images/foot_pic.jpg"></p>
+    </div>
+</body>
+
+</html>
