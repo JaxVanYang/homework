@@ -1,0 +1,25 @@
+注意：
+没有简答题，所有的概念都是自己理解。
+只要平时编程多的同学都没有问题，15，16，18章不考。
+各个系考试题目不同，不要与其它系转发以免误导。
+
+Java的基本语句（赋值，条件，循环）
+变量的定义，常量的定义
+数组的用法，数组的下标，如何取数组元素，数组的长度
+字符串的用法
+
+面向对象的概念（数据域，方法，静态和实例，封装，多态的概念）
+方法的结构，主方法的结构，方法如何调用（静态的和非静态的）
+访问控制符（private default protected public）
+继承的概念
+接口的概念
+抽象类的概念
+equals方法，caompareTo方法
+this关键字，supper关键字
+方法的重载和重写
+
+
+如何读一个txt文件，并处理文件读不出的异常
+网络程序（InetAddress，SeverSocket，Socket，DataInputStream，DataOutputStream）
+JavaFX的布局管理器（BorderPane，FlowPane，GridPane）是如何布局控件的
+
