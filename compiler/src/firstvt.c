@@ -36,8 +36,9 @@ int main() {
 		exit(EXIT_FAILURE);
 	}
 	for (int i = 1; i <= n; ++i) {
-		char left, right[BUFSIZE], buf[BUFSIZE];
-		char *s, *bufp;	// pointers used to read string in buf
+		char left[2], right[BUFSIZE], buf[BUFSIZE];
+		char *bufp = buf;	// pointers used to read string in buf
+		int nread;	// used to update bufp
 		printf("Please input the %d rule's left (e.g. P -> Abc): ", i);
 		fgets(buf, BUFSIZE, stdin);
 		// printf("before: %s\n", buf);
@@ -45,23 +46,18 @@ int main() {
 		replace_str(buf, "|", " ");
 		// printf("replace to %s\n", buf);
 
-		for (bufp = buf; isspace(*bufp); ++bufp);	// find first non-space char
-		if (*bufp == '\0') exit(EXIT_FAILURE);
-		left = *bufp;
-		++bufp;	// point to the next char
-
-		while (*bufp != '\0') {
-			for (; isspace(*bufp); ++bufp);	// find the first non-space char
-			if (*bufp == '\0') break;
-			for (s = right; *bufp != '\0' && !isspace(*bufp); ++s, ++bufp) *s = *bufp;	// copy the string to right
-			*s = '\0';
+		sscanf(bufp, "%1s%n", left, &nread);
+		bufp += nread;
+		// parse each right expression
+		while (sscanf(bufp, "%s%n", right, &nread) > 0) {
+			bufp += nread;
 			// enlarge allocated space if needed
 			// no need to copy string in stuct, because they won't be freed
 			if (used == size) {
 				size += n;
 				grammers = realloc(grammers, size * sizeof(Grammer));
 			}
-			set_grammer(grammers + used, left, right);
+			set_grammer(grammers + used, left[0], right);
 			printf("%c -> %s\n", grammers[used].left, grammers[used].right);
 			++used;
 		}
